@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Cliente | Sistema Jurídico</title>
+  <link rel="stylesheet" href="menu_cliente.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bem-vindo, Cliente!</h1>
+      <button id="logoutCliente" class="logout">Sair</button>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="meus_processos_cliente.html">📄 Meus Processos</a></li>
+        <li><a href="fale_conosco_cliente.html">💬 Fale Conosco</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Área do Cliente</h2>
+      <p>Escolha uma opção no menu para continuar.</p>
+      <!-- Botão Voltar ao Menu principal -->
+      <button id="btnVoltarMenuCliente" class="voltar">⬅ Voltar ao Menu</button>
+    </main>
+  </div>
+
+  <!-- Corrigido para referenciar o arquivo JS correto -->
+  <script src="menu_cliente.js"></script>
+</body>
+</html>
