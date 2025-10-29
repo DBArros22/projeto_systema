@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Administrador | Sistema Jurídico</title>
+  <link rel="stylesheet" href="login_admin.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login do Administrador</h1>
+    <form id="formAdmin">
+      <input type="text" id="usernameAdmin" placeholder="Usuário" required />
+      <input type="password" id="passwordAdmin" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+      <p id="erroAdmin" class="erro"></p>
+    </form>
+
+    <!-- Botão Voltar -->
+    <button id="btnVoltar" class="voltar">Voltar</button>
+  </div>
+
+  <script>
+    // Validação de login (exemplo simples)
+    const admins = [
+      { username: "admin1", password: "123456" },
+      { username: "admin2", password: "senha123" }
+    ];
+
+    const formAdmin = document.getElementById("formAdmin");
+    if (formAdmin) {
+      formAdmin.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const username = document.getElementById("usernameAdmin").value.trim();
+        const password = document.getElementById("passwordAdmin").value.trim();
+        const erroMsg = document.getElementById("erroAdmin");
+
+        const user = admins.find(u => u.username === username && u.password === password);
+        if (user) {
+          localStorage.setItem("loggedInAdmin", username);
+          window.location.href = "menu_admin.html"; // redireciona para menu admin
+        } else {
+          erroMsg.textContent = "Usuário ou senha inválidos.";
+        }
+      });
+    }
+
+    // Botão Voltar para a index
+    const btnVoltar = document.getElementById("btnVoltar");
+    if (btnVoltar) {
+      btnVoltar.addEventListener("click", function() {
+        window.location.href = "index.html";
+      });
+    }
+  </script>
+</body>
+</html>
