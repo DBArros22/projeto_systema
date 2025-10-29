@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Cliente</title>
+  <link rel="stylesheet" href="login_cliente.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login do Cliente</h1>
+    <form id="formCliente">
+      <input type="text" id="usernameCliente" placeholder="Usuário ou E-mail" required>
+      <input type="password" id="passwordCliente" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+      <p id="erroCliente" class="erro"></p>
+    </form>
+
+    <!-- Botão Voltar -->
+    <button id="btnVoltar" class="voltar">Voltar</button>
+  </div>
+
+  <script>
+    // Validação de login do cliente
+    const clientes = [
+      { username: "cliente1", password: "123456" },
+      { username: "cliente2", password: "senha123" }
+    ];
+
+    const formCliente = document.getElementById("formCliente");
+    if(formCliente){
+      formCliente.addEventListener("submit", function(e){
+        e.preventDefault();
+        const username = document.getElementById("usernameCliente").value.trim();
+        const password = document.getElementById("passwordCliente").value.trim();
+        const erroMsg = document.getElementById("erroCliente");
+
+        const user = clientes.find(u => u.username === username && u.password === password);
+        if(user){
+          localStorage.setItem("loggedInUser", username);
+          window.location.href = "menu_cliente.html";
+        } else {
+          erroMsg.textContent = "Usuário ou senha inválidos.";
+        }
+      });
+    }
+
+    // Botão Voltar para a página inicial
+    const btnVoltar = document.getElementById("btnVoltar");
+    if(btnVoltar){
+      btnVoltar.addEventListener("click", function(){
+        window.location.href = "index.html";
+      });
+    }
+  </script>
+</body>
+</html>
