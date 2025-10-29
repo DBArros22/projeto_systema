@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes | Sistema Jurídico</title>
+  <link rel="stylesheet" href="cliente_admin.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>👥 Clientes Cadastrados</h1>
+      <button id="btnVoltar" class="voltar">⬅ Voltar ao Menu</button>
+    </header>
+
+    <main>
+      <!-- Formulário para adicionar clientes -->
+      <form id="formCliente">
+        <input type="text" id="nome" placeholder="Nome do cliente" required>
+        <input type="email" id="email" placeholder="Email do cliente" required>
+        <button type="submit">Adicionar Cliente</button>
+      </form>
+
+      <!-- Tabela de clientes -->
+      <table id="tabelaClientes" class="tabela">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Linhas adicionadas dinamicamente pelo JS -->
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="clientes_admin.js"></script>
+</body>
+</html>
