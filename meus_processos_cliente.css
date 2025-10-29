@@ -1,0 +1,12 @@
+/* meus_processos.css - Estilo da página Meus Processos (cliente) */
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial, sans-serif;background:#f4f7fb;color:#222;padding:20px}
+.container{max-width:980px;margin:18px auto;background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.08)}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+header h1{margin:0;font-size:20px;color:#0b5688}
+.voltar{background:#7f8c8d;border:none;color:#fff;padding:8px 12px;border-radius:8px;cursor:pointer}
+.tabela{width:100%;border-collapse:collapse;margin-top:12px}
+.tabela th,.tabela td{padding:10px;border:1px solid #e6e9ee;text-align:left}
+.tabela th{background:#f0f5fa;color:#0b5688}
+.tabela tr:nth-child(even){background:#fbfdff}
+@media(max-width:720px){.tabela thead{display:none}.tabela tr{display:block;margin:8px 0}.tabela td{display:block;border:none;padding:8px;background:#fff}}
