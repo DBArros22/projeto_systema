@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale Conosco | Cliente</title>
+  <link rel="stylesheet" href="fale_conosco_cliente.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💬 Fale Conosco</h1>
+      <button id="btnVoltarCliente" class="voltar">⬅ Voltar ao Menu</button>
+    </header>
+
+    <main>
+      <form id="formContato">
+        <input type="text" id="assunto" placeholder="Assunto" required>
+        <textarea id="mensagem" placeholder="Descreva sua dúvida..." rows="5" required></textarea>
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+      <p id="respostaIA" class="resposta"></p>
+    </main>
+  </div>
+
+  <script src="fale_conosco_cliente.js"></script>
+</body>
+</html>
