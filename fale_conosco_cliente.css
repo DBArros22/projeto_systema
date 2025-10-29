@@ -1,0 +1,14 @@
+/* fale_conosco.css - Estilo do formulário de contato (cliente) */
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI, Arial, sans-serif;background:#f7fbff;color:#1b2b3a;padding:20px}
+.container{max-width:760px;margin:24px auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+header{display:flex;justify-content:space-between;align-items:center}
+header h1{color:#0072ff;margin:0}
+.voltar{background:#7f8c8d;color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer}
+form{margin-top:14px;display:flex;flex-direction:column;gap:10px}
+input[type="text"], textarea{
+  width:100%;padding:12px;border-radius:8px;border:1px solid #dbe9ff;background:#fbfdff;font-size:14px;resize:vertical;
+}
+button[type="submit"]{background:#0072ff;color:#fff;border:none;padding:12px;border-radius:8px;font-weight:700;cursor:pointer}
+button[type="submit"]:hover{background:#005fc1}
+@media(max-width:600px){.container{padding:14px}}
