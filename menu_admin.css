@@ -1,0 +1,114 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(135deg, #141E30, #243B55);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container do menu */
+.container {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 22px;
+  color: #f5c76b;
+}
+
+/* Botão de logout */
+.logout {
+  background: #ff6b6b;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout:hover {
+  background: #e55b5b;
+}
+
+/* Menu de navegação */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+nav li {
+  margin: 15px 0;
+}
+
+nav button {
+  width: 100%;
+  padding: 15px 0;
+  background: #ff9f1c;
+  color: #141E30;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+nav button:hover {
+  background: #e68a00;
+}
+
+/* Main */
+main h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #dbe9ff;
+}
+
+main p {
+  color: #dbe9ff;
+  font-size: 14px;
+}
+
+/* Responsividade */
+@media(max-width:460px) {
+  .container {
+    width: 92%;
+    padding: 25px;
+  }
+
+  nav button {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+}
