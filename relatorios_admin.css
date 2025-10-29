@@ -1,0 +1,54 @@
+/* Container principal */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho */
+header h1 {
+  text-align: center;
+  color: #1f3c88;
+  margin-bottom: 20px;
+}
+
+/* Área do relatório */
+#relatorio {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+#relatorio h3 {
+  color: #1f3c88;
+  margin-bottom: 10px;
+}
+
+#relatorio p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Botão voltar */
+.voltar {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #1f3c88;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.voltar:hover {
+  background-color: #3b55b5;
+}
