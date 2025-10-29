@@ -1,37 +1,29 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Botões do menu
-  const btnClientes = document.getElementById("btnClientes");
-  const btnProcessos = document.getElementById("btnProcessos");
-  const btnRelatorios = document.getElementById("btnRelatorios");
-  const logoutBtn = document.getElementById("logoutAdmin");
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatórios | Sistema Jurídico</title>
+  <link rel="stylesheet" href="relatorios_admin.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Relatórios do Administrador</h1>
+    </header>
 
-  // Navegação via JS
-  if (btnClientes) {
-    btnClientes.addEventListener("click", () => {
-      window.location.href = "clientes_admin.html";
-    });
-  }
+    <main>
+      <div id="relatorio">
+        <!-- O conteúdo do relatório será preenchido pelo JS -->
+      </div>
 
-  if (btnProcessos) {
-    btnProcessos.addEventListener("click", () => {
-      window.location.href = "processos_admin.html";
-    });
-  }
+      <!-- Botão para voltar ao menu do administrador -->
+      <button id="voltarAdmin" class="voltar">⬅ Voltar ao Menu</button>
+    </main>
+  </div>
 
-  if (btnRelatorios) {
-    btnRelatorios.addEventListener("click", () => {
-      window.location.href = "relatorios_admin.html";
-    });
-  }
+  <!-- Script do relatório -->
+  <script src="relatorios_admin.js"></script>
+</body>
+</html>
 
-  // Logout com confirmação
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", () => {
-      const confirmar = confirm("Deseja realmente sair do sistema?");
-      if (confirmar) {
-        localStorage.removeItem("loggedInUser");
-        window.location.href = "index.html";
-      }
-    });
-  }
-});
